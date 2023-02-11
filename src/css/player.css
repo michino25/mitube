@@ -287,8 +287,6 @@ body {
 .btn-close:focus {
   box-shadow: none;
 }
-.modal-body {
-}
 .part-header {
   font-size: 1.35rem;
   margin: 0;
