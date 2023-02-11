@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 16px;
+  max-width: 900px;
+  margin: auto;
+  padding-bottom: 25px;
+}
+
+kbd {
+  background-color: #eee;
+  border-radius: 3px;
+  border: 1px solid #b4b4b4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
+    0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+  color: #333;
+  display: inline-block;
+  font-family: monospace;
+  font-size: 0.85em;
+  font-weight: 700;
+  line-height: 1;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  border: 1px solid #dee2e6;
+}
+
+th,
+td {
+  padding: 4px 8px;
+  border: 1px solid #dee2e6;
+}
+
+thead th {
+  border-bottom: 2px solid #dee2e6;
+}
+
+.key-width {
+  width: 35%;
+}
+
+.desc-width {
+  width: 65%;
+}
+
+.d-none {
+  display: none;
+}
+
+.mt-2 {
+  margin-top: 8px;
+}
+
+.mb-2 {
+  margin-bottom: 8px;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #ffffff;
+  }
+
+  table {
+    border: 0;
+  }
+
+  th,
+  td {
+    border: 1px solid #454d55;
+  }
+
+  thead th {
+    border-bottom: 2px solid #454d55;
+  }
+}
