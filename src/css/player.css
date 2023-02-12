@@ -16,6 +16,9 @@ body {
   margin: 0;
   padding: 0;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 .btn {
   padding: 2px;
 }
@@ -106,9 +109,7 @@ body {
   position: absolute;
   width: 100%;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  color: var(--gray);
+
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), transparent);
   padding: 0.25rem 0.5rem;
   opacity: 0.9;
@@ -127,6 +128,7 @@ body {
 /* ---------------------- input range, progress time line ---------------------- */
 #progress-controls {
   display: flex;
+  padding: 0 8px;
   justify-content: center;
 }
 #progress {
@@ -174,6 +176,7 @@ body {
 #buttons-controls {
   display: flex;
   margin-top: 0.25rem;
+  padding: 0 8px;
 }
 /* buttons-left/center/right */
 #buttons-controls > div {

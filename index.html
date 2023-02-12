@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="./src/json/manifest.json">
-    <link rel="shortcut icon" href="./src/images/icon128.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./src/images/icon/128.png" type="image/x-icon">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
@@ -98,7 +98,7 @@
                 <div class="row">
                     <div class="col-7">
                         <h3 class="part-header">
-                            <img src="./src/images/icon128.png" id="icon-mitube">
+                            <img src="./src/images/icon/128.png" id="icon-mitube">
                             MiTube
                         </h3>
                         <span class="part-span">youtube interface video player</span>
@@ -183,10 +183,27 @@
 
         const folderBtn = document.getElementById("open-file");
         const openFileGetstarted = document.getElementById("open-file-btn");
+
         openFileGetstarted.onclick = () => {
             folderBtn.click();
+        }
+
+        // Hide get started
+        folderBtn.onclick = () => {
             getstarted.classList.add("d-none");
         }
+
+        document.onkeydown = (e) => {
+            var evtobj = window.event ? event : e
+            if (evtobj.keyCode == 79 && evtobj.ctrlKey) {
+                getstarted.classList.add("d-none");
+            }
+        }
+
+        document.ondrop = (e) => {
+            getstarted.classList.add("d-none");
+        };
+
 
     </script>
 </body>

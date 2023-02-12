@@ -16,6 +16,7 @@ const info = document.getElementById("info"),
   errorInfo = document.getElementById("error-info"),
   ltInfo = document.getElementById("lt-info"),
   rtInfo = document.getElementById("rt-info"),
+  infoBar = document.getElementById("info-bar"),
   controlsPanel = document.getElementById("controls"),
   progress = document.getElementById("progress"),
   volume = document.getElementById("volume"),
@@ -302,7 +303,7 @@ class Controls {
           (rightTime.textContent = Utils.formatTime(video.duration))));
   }
   static updateTracking() {
-    let percent = (progress.value / progress.max) * 100;
+    let percent = (progress.value / progress.max) * 100 + 0.1;
     progress.style.background = `linear-gradient(90deg, red ${percent}%, rgba(255, 255, 255, 0.2) ${percent}%)`;
   }
   static onLoadedmetadata() {
@@ -386,6 +387,7 @@ class Controls {
     Controls.hidden = !1;
     Controls.updateTime();
     Controls.updateTracking();
+    infoBar.classList.remove("d-none");
     controlsPanel.classList.remove("d-none");
     playerPanel.classList.remove("hide-cursor");
     Controls.autoHide();
@@ -397,6 +399,7 @@ class Controls {
   static hide() {
     if (video.currentTime > 0 && !video.paused && !video.ended) {
       Controls.hidden = !0;
+      infoBar.classList.add("d-none");
       controlsPanel.classList.add("d-none");
       playerPanel.classList.add("hide-cursor");
     }
